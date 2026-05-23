@@ -10,6 +10,7 @@ is an ODE that depends on the independent variable $t$. The equation:
 \[ -\partial_t^2u + \partial_x^2u + + \partial_y^2u + \partial_z^2u = 0 \]
 is an example of a PDE that depends on multiple independent variables $x$, $y$, $z$, and $t$. The focus of this course will be on ODEs.
 
+
 \begin{example}
     Consider the following differential equation:
 \end{example}
@@ -18,11 +19,57 @@ is an example of a PDE that depends on multiple independent variables $x$, $y$, 
 
     Recall that $\frac{dy}{dt}\big|_p$ represents the slope of $y(t)$ passing through the point $p$. We can thus say that the \bold{direction} of $y(t)$ at point $t = t_0$ is equal to $-y(t_0) + t_0$. With this information, we can plot a \bold{direction field} (or \bold{slope field}) for this differential equation:
 
-\begin{example}
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}[scale=0.54, transform shape]
+            \draw[->] (\dmin-0.4, 0) -- (\dmax+0.4, 0) node[right] {$t$};
+            \draw[->] (0, \dmin-0.4) -- (0, \dmax+0.4) node[above] (ylabel) {$y$};
+            \pgfmathsetmacro{\dminb}{\dmin+0.5}
+	         \foreach \x in {\dmin,\dminb,...,\dmax} {
+	         	\foreach \y in {\dmin,\dminb,...,\dmax} {
+                  \pgfmathsetmacro{\m}{\x-\y}
+			         \pgfmathsetmacro{\dt}{(\len/2)/sqrt(1+\m*\m)}
+		      	   \pgfmathsetmacro{\dy}{\m*\dt}
+			         \draw[gray, very thick] (\x-\dt,\y-\dy) -- (\x+\dt,\y+\dy);
+		            }
+	         }
+         \end{tikzpicture}
+         \caption{The slope field for the equation $\frac{dy}{dt} = -y(t) + t$}
+     \end{figure}
+      
+     Remark that, in accordance with our intuition, the slope decreases as we move up the $y$ axis and it increases as we move up the $t$ axis. Each line segment in Figure 1 represents the slope of the equation at one of its solutions. Note that if we travel along the line $y(t) = t$, we see that the slope of the solution is always zero. We say that the line $y(t) = t$ is the \bold{equilibrium solution} of the DE and that it does not change with respect to time (i.e. $\frac{dy}{dt} = 0$):
+
+     \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}[scale=0.75, transform shape]
+            \draw[->] (\dmin-0.4, 0) -- (\dmax+0.4, 0) node[right] {$t$};
+            \draw[->] (0, \dmin-0.4) -- (0, \dmax+0.4) node[above] (ylabel) {$y$};
+            \pgfmathsetmacro{\dminb}{\dmin+0.5}
+	         \foreach \x in {\dmin,\dminb,...,\dmax} {
+	         	\foreach \y in {\dmin,\dminb,...,\dmax} {
+                  \pgfmathsetmacro{\m}{\x-\y}
+			         \pgfmathsetmacro{\dt}{(\len/2)/sqrt(1+\m*\m)}
+		      	   \pgfmathsetmacro{\dy}{\m*\dt}
+			         \draw[gray, very thick] (\x-\dt,\y-\dy) -- (\x+\dt,\y+\dy);
+		            }
+	         }
+              \draw[scale=0.5, domain =-10:10, smooth, variable=\x, red, very thick] plot ({\x}, {\x});      
+         \end{tikzpicture}
+         \caption{The equilibrium solution (in red) to the equation $\frac{dy}{dt} = -y(t) + t$ is $y(t) = t$.}
+     \end{figure}
+
+
+     \begin{example}
     Consider the following differential equation:
     \[ \frac{dy}{dt} = ay \]
-    where $a \in \RR$. Plot direction fields for $a = -2, -1, 0, 1, 2$.
+    where $a \in \RR$. Plot direction fields for $a = -1, 0, 1$.
 \end{example}
+   \begin{solution}
+   When $a = -1$, we have that $\frac{dy}{dt} = -y$, i.e. the slope of the equation is equal to $-y$. Observe that $\frac{dy}{dt}$ is independent of $t$ and therefore will not change with respect to $t$. The direction field is as follows:
+
+
+   \end{solution}
+
 
 \subsection{Solutions of Differential Equations}
 
