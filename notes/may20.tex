@@ -1,0 +1,28 @@
+\section{Lecture 4: Modelling First Order Equations and Autonomous Differential Equations}
+
+\subsection{Modelling}
+
+There are three steps in the process from statment of physical problems to solving the problem itself:
+
+\begin{enumerate}
+    \item Translation: understand the physical probelem, give symbols to unknown quantities and develop equations describing the phenomena
+    \item Solve: analytically or numerically/approximate or exact/bring all information to bear
+    \item Interpretation: does it make sense, is it unique, is it stable?
+\end{enumerate}
+
+\subsection{Autonomous Equations \& Population Dynamics}
+
+
+\begin{example}
+    Let $f(x)$ be given below:
+    \[f(x) = \begin{cases}
+        x \hspace{0.5cm} \text{if} \hspace{0.2cm} x \in \QQ \\
+        0 \hspace{0.5cm} \text{if} \hspace{0.2cm} x \in \RR \setminus \QQ
+    \end{cases}\]
+    We claim that $f(x)$ is continuous only at the point $x = 0$.
+\end{example}
+\begin{solution}
+    Firstly, let $x_0$ be some arbitrary element in $\RR \setminus \QQ$. We recall that $f(x)$ is continuous at some $a \in \RR$ if $f(a) = a \land \lim_{x\to a}f(x) = f(a)$. However the first condition is clearly not satisfied as $f(x_0) = 0 \notin \RR \setminus \QQ$, ergo $f(x)$ is not continuous on the irrationals.
+    
+    Now, let $x_0$ be some arbitrary element in $\QQ$. 
+\end{solution}
