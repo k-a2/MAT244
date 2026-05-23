@@ -1,8 +1,8 @@
-PWD /Users/kiari2/Documents/schoolwork/MAT244/notes
+PWD /Users/kiari2/Documents/GitHub/MAT244/notes
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/kiari2/Documents/schoolwork/MAT244/notes/main.tex
+INPUT main.tex
 OUTPUT main.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls

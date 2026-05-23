@@ -1,6 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1779509953.46647 "/Users/kiari2/Documents/schoolwork/MAT244/notes/main.tex" "main.pdf" "main" 1779509955.15366 0
-  "/Users/kiari2/Documents/schoolwork/MAT244/notes/main.tex" 1779509953.25021 2545 a09208b90236e8e72961aa54b374d0db ""
+["pdflatex"] 1779541358.84908 "main.tex" "main.pdf" "main" 1779541363.44511 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_edcawa.enc" 1490131464 2833 ab571e969b0d4b8e87f8f63627b1db02 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc" 1490131464 2822 11e839d2bbb939844844619b2cff7df6 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_lyu3x3.enc" 1490131464 2835 bfce207f80837ef8737b6a788d8bc760 ""
@@ -331,11 +330,11 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1740076622.12528 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1740076572 8221430 a23cd5bc61ef5b28299cf12b0437b99e ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "main.aux" 1779509954.92871 771 3a6e2d5d9ff3efe88d145fdbd0c63355 "pdflatex"
-  "main.out" 1779509954.92946 1023 17284bebd0aa4d5e91b87fadfcb12459 "pdflatex"
-  "main.tex" 1779509953.25021 2545 a09208b90236e8e72961aa54b374d0db ""
-  "main.toc" 1779509954.92973 408 e6eb0bf675c0758a81e965ae26fd8ee0 "pdflatex"
-  "may6.tex" 1779509912.54063 5392 424607007c540307394d60172ca7b5d8 ""
+  "main.aux" 1779541363.16859 1165 0db037a8a87745f810f0de6a4db74d16 "pdflatex"
+  "main.out" 1779541363.17237 1023 17284bebd0aa4d5e91b87fadfcb12459 "pdflatex"
+  "main.tex" 1779541350.33904 2629 d047807d76d90cb9059e33ca78b459b6 ""
+  "main.toc" 1779541363.17289 408 e88ac5c29ea444896b6328adb4c8d9cd "pdflatex"
+  "may6.tex" 1779541350.44255 7877 e1239ce81ea8e63ab0f671dd583247e6 ""
   (generated)
   "main.aux"
   "main.log"
