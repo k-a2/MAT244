@@ -1,0 +1,54 @@
+\section{Integrating Factors \& Separable Equations}
+
+\subsection{More Examples of Integrating Factors}
+
+\begin{example}
+    Solve the differential equation $\frac{dy}{dt} - y = e^{-t}$.
+\end{example}
+\begin{solution}
+    Start by multiplying the equation by the integrating factor $\mu(t)$:
+    \begin{align}
+        \mu(t)\frac{dy}{dt} - \mu(t)y = \mu(t)e^{-t}
+    \end{align}
+    Using Remark 2.2.3. (remember this), we find the integrating factor. Let $p(t) = -1$: 
+    \begin{align*}
+        &\hspace{1.2cm} \mu(t) = \exp \int -dt \\
+        &\iff \mu(t) = e^{-t + C} \\
+        &\iff \mu(t) = Ae^{-t} 
+     \end{align*}
+    Equation $(4)$ becomes:
+    \begin{align}
+        e^{-t}\frac{dy}{dt} - e^{-t}y = e^{-2t}
+    \end{align}
+    We recognize the left side of equation $(5)$ as the derivative of the product $e^{-t}y$. Integrating both sides, we obtain:
+    \begin{align*}
+        &\hspace{1cm}\cancel{\int \frac{d}{dt}}\left[e^{-t}y\right]\cancel{dt} = \int e^{-2t}dt \\
+        &\implies e^{-t}y = -\frac{e^-2t}{2} + C \\
+        &\implies y = -\frac{e^{-t}}{2} + Ce^t \qedhere
+    \end{align*}
+\end{solution}
+\begin{example}
+    Solve the differential equation $\frac{dy}{dt} = y\sin(t) + 2te^{-\cos(t)}$.
+\end{example}
+\begin{solution}
+    Let us first rearrange the equation to put all terms with $y$ on the left side, then multiply by the integrating factor $\mu(t)$:
+    \begin{align}
+        \mu(t)\frac{dy}{dt} - \mu(t)y\sin(t) = \mu(t)2te^{-\cos(t)}
+    \end{align}
+    We recall Remark 2.2.3 (again, remember this) to find $\mu(t)$. Let $p(t) = -\sin(t)$:
+    \begin{align*}
+        \mu(t) &= \exp \int -\sin(t) dt \\
+        &= e^{\cos(t) + C} \\
+        &= Ae^{\cos(t)}
+    \end{align*}
+    Plugging our newfound value of $\mu(t)$ into Equation $(6)$:
+    \[ e^{\cos(t)}\frac{dy}{dt} - e^{\cos(t)}y\sin(t) = 2t \]
+    We recognize the left side of the equation as the derivative of the product $e^{\cos(t)}y$. Integrating and isolating for $y$ yields:
+    \begin{align*}
+        &\hspace{1.2cm} \cancel{\int \frac{d}{dt}}\left[e^{\cos(t)}y\right] \cancel{dt} = \int 2t dt\\
+        &\iff e^{\cos(t)}y = t^2 + C \\
+        &\iff y = e^{-\cos(t)}(t^2 + C) \qedhere
+    \end{align*}
+\end{solution}
+
+\subsection{Separable Equations}

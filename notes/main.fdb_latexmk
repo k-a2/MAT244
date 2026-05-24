@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1779659600.81326 "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" "main.pdf" "main" 1779659606.09429 0
-  "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" 1779628359.33248 2073 5230f0b4dbd73e7e000868e2a8768e12 ""
+["pdflatex"] 1779663740.38079 "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" "main.pdf" "main" 1779663745.67443 0
+  "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" 1779660412.59499 2107 c3e0619b4ac5bfc45a2464cd585e0667 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_edcawa.enc" 1490131464 2833 ab571e969b0d4b8e87f8f63627b1db02 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc" 1490131464 2822 11e839d2bbb939844844619b2cff7df6 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_lyu3x3.enc" 1490131464 2835 bfce207f80837ef8737b6a788d8bc760 ""
@@ -283,12 +283,13 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1740076572 8221430 a23cd5bc61ef5b28299cf12b0437b99e ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "kian.sty" 1779592659.55114 814 ab78d85eae77302d8548ba6d7ff2ed6a ""
-  "main.aux" 1779659605.88512 1889 3432bdc348af4bb0b53d492d16e936a1 "pdflatex"
-  "main.out" 1779659605.88584 1803 99d4da8dd098b494fc228672bd657168 "pdflatex"
-  "main.tex" 1779628359.33248 2073 5230f0b4dbd73e7e000868e2a8768e12 ""
-  "main.toc" 1779659605.88614 713 f9c65b1c136cd7c7e4314bb502106c3a "pdflatex"
+  "main.aux" 1779663745.46644 2300 14487adafe7ce1e3c26cf7e288464a45 "pdflatex"
+  "main.out" 1779663745.46726 2471 ae9f764ef901224a2cf748011092150f "pdflatex"
+  "main.tex" 1779660412.59499 2107 c3e0619b4ac5bfc45a2464cd585e0667 ""
+  "main.toc" 1779663745.46757 1001 b95d16add4e0e1ceb3946264fba558fe "pdflatex"
+  "may13.tex" 1779663734.6437 2251 174a6af7f8f719b0e8aeff0efbf30708 ""
   "may6.tex" 1779593146.27397 10466 dca746fddbb8f21e11bf5cdc76a8a75b ""
-  "may8.tex" 1779659600.58491 5140 d195052a422066edd9a2854d51f0311f ""
+  "may8.tex" 1779659924.40141 5140 f299fec9f543ba7747d7b8cb06e337aa ""
   (generated)
   "main.aux"
   "main.log"

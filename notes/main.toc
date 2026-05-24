@@ -5,3 +5,6 @@
 \contentsline {section}{\numberline {2}Linear \& Nonlinear ODEs, Integrating Factors}{7}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Linear \& Nonlinear ODEs}{7}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Integrating Factors with Linear First Order ODEs}{7}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Integrating Factors \& Separable Equations}{10}{section.3}%
+\contentsline {subsection}{\numberline {3.1}More Examples of Integrating Factors}{10}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Separable Equations}{11}{subsection.3.2}%
