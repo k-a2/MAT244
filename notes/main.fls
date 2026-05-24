@@ -546,6 +546,11 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/newtx/nxlmi7.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/LibertineMathMI7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/NewTXMI7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
+INPUT ./may8.tex
+INPUT ./may8.tex
+INPUT ./may8.tex
+INPUT ./may8.tex
+INPUT may8.tex
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

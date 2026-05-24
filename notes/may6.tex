@@ -7,7 +7,7 @@
 An \bold{differential equation}, which I will often abreviate as a \bold{DE}, is an equation containing derivatives of an unknown function. The two main types of DEs are \bold{ordinary differential equations}, or \bold{ODEs}, which are equations involving functions depending on a single independent variable, and \bold{partial differential equations}, or \bold{PDEs}, which are equations involving functions which depend on more than one independent variable. For example, the equation:
 \[ \frac{d^2u}{dt^2} + \frac{du}{dt} + u = f(t) \]
 is an ODE that depends on the independent variable $t$. The equation:
-\[ -\partial_t^2u + \partial_x^2u + + \partial_y^2u + \partial_z^2u = 0 \]
+\[ -\partial_t^2u + \partial_x^2u + \partial_y^2u + \partial_z^2u = 0 \]
 is an example of a PDE that depends on multiple independent variables $x$, $y$, $z$, and $t$. The focus of this course will be on ODEs.
 
 
@@ -15,7 +15,7 @@ is an example of a PDE that depends on multiple independent variables $x$, $y$, 
     Consider the following ODE:
 \end{example}
     \[ \frac{dy}{dt} = -y(t) + t \]
-    How can we determine what this equation represents? From calculus, we know that $dy/dt$ is the derivative of $y(t)$, and that this derivative represents how fast the function $y$ is changing with respect to $t$. Since we have that $dy/dt = -y(t) + t$, we can infer that $t$ will decrease as $y$ increases and will tend to increase as $t$ increases.
+    How can we determine what this equation represents? From calculus, we know that $dy/dt$ is the derivative of $y(t)$, and that this derivative represents how fast the function $y$ is changing with respect to $t$. Since we have that $dy/dt = -y(t) + t$, the right hand side shows that the slope will decrease as $y$ increases and will increase as $t$ increases.
 
     Recall that $\frac{dy}{dt}\big|_p$ represents the slope of $y(t)$ passing through the point $p$. We can thus say that the \bold{direction} of $y(t)$ at point $t = t_0$ is equal to $-y(t_0) + t_0$. With this information, we can plot a \bold{direction field} (or \bold{slope field}) for this differential equation:
 
@@ -36,10 +36,6 @@ is an example of a PDE that depends on multiple independent variables $x$, $y$, 
          \end{tikzpicture}
          \caption{The slope field for the equation $\frac{dy}{dt} = -y(t) + t$}
      \end{figure}
-
-
-
-
   
      Remark that, in accordance with our intuition, the slope decreases as we move up the $y$ axis and it increases as we move up the $t$ axis. Each line segment in Figure 1 represents the slope of the equation at one of its solutions. Note that if we travel along the line $y(t) = t$, we see that the slope of the solution is always zero. We say that the line $y(t) = t$ is the \bold{equilibrium solution} of the DE and that it does not change with respect to time (i.e. $\frac{dy}{dt} = 0$):
 
@@ -111,7 +107,6 @@ is an example of a PDE that depends on multiple independent variables $x$, $y$, 
      \end{figure}
 
      Since the slope is always zero, any line passing through the direction field will have slope zero. There are hence infinitely many equilibrium  solutions. \qedhere
-
    \end{solution}
 
 \subsection{Solutions of Differential Equations}
@@ -182,8 +177,9 @@ Suppose that we are also given an initial condition, for instance suppose for th
 
 \subsection{Classification of Differential Equations}
 
-The \textbf{order} of a DE is the highest derivative in the equation. For example, the order of $y' = y(t)$ is 1, and the order of $y'' + y + t = y(t)$ is 2. The general form of an order $n$ DE is:
+The \textbf{order} of a DE is the highest derivative in the equation. For example, the order of $y' = y(t)$ is 1, and the order of $y'' + y + t = 0$ is 2. The general form of an order $n$ DE is:
 \[ F(x, u(x), u'(x), u''(x), \dots, u^{(n)}(x)) = 0\]
 A solution of the ODE $y^{(n)} = f(x,y, y', \dots, y^{(n-1)})$ on the interval $a < x < b$ is a function $\phi$ such that $\phi', \phi'', \dots, \phi^{(n)}$ exists and satisfies $\phi^{(n)} = f(x, \phi, \phi', \dots, \phi^{(n-1)})$ for all $x \in (a, b)$. Note that $\phi$ and all necessary derivatives must exist on $a < x < b$ and $\phi$ must satisfy the differential equation.
 
 For example, consider $y'' + y = 0$, or $y'' = -y$. Solutions to this DE will be of the form $e^{ix}$ or make use of sines and cosines (for instance, it is easy to check that $y = \sin(x) + \cos(x)$ is a solution). However, naturally the question arises: does a solution always exist, if so it is unique? And how do we find it? We will learn how to answer those questions in the next lecture. 
+

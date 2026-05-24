@@ -1,0 +1,32 @@
+\section{Linear \& Nonlinear ODEs, Integrating Factors}
+
+\it{This lecture corresponds to \S1.3 and \S2.1 in the textbook.}
+
+\subsection{Linear \& Nonlinear ODEs}
+
+\begin{defbox}
+    We say a differential equation $F(x, y, y', y'', \dots, y^{(n)}) = 0$ is \bold{linear} if $F$ is a linear function of $y, y', y'', \dots, y^{(n)}$. Thus the general form of a linear differential equation is:
+    \[a_n(x)y^{(n)} + a_{n-1}(x)y^{(n-1)} + \dots + a_1(x)y' + a_0(x)y = g(x)\]
+    We say an equation is \bold{nonlinear} if it is not linear.
+\end{defbox}
+
+The equation $y + y'' = 0$ is an example of a linear DE, as it can be written in the form $a_0(x)y + a_2(x)y'' = 0$ where $a_0(x) = a_2(x) = 1$. Another example of a linear DE is $y'\sin(x) = x$, where $a_1(x) = \sin(x)$ and $g(x) = x$. Conversely, the equation $y' + y^2 = 0$ is a nonlinear DE as it cannot be written in a linear form.
+
+In mathematics, linear theory has been very well developed, but nonlinear theory has not been developed to the same degree. However, we have been able to approximate nonlinear equations by linear ones using \bold{linear approximations}.
+
+For example, consider the following differential equation representing an oscillating pendulum:
+\[\frac{d^2\theta}{dt^2} + \frac{g}{L}\sin\theta = 0\]
+This equation is obviously nonlinear due to the $\sin\theta$. However, when the angle $\theta$ is small, we can approximate $\sin\theta \approx \theta$, hence we can linearize the equation as:
+\[\frac{d^2\theta}{dt^2} + \frac{g}{L}\theta = 0\]
+which is an equation we can solve (see exercises).
+
+\subsection{Integrating Factors with Linear First Order ODEs}
+
+In the last lecture, we learned how to solve ODEs of the form $\frac{dy}{dx} = -ay + b$, where $a$, $b \in \RR$. We did so by directly integrating the equation. However, this method of solution does not work for all ODEs.
+
+For this section, we will be working with equations of the form $\frac{dy}{dx} + p(x)y = g(x)$, where $p$ and $g$ are functions of the independent variable $t$. We cannot solve differential equations of this form with direct integrations, so we introduce a new method of solutions called integrating factors, with $\mu(t)$ being the integrating factor.
+
+\begin{example}
+    Solve the differential equation $y' + 2y = 1$.
+\end{example}
+

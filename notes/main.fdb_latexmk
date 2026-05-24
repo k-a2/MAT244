@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1779592660.88135 "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" "main.pdf" "main" 1779592666.16458 0
-  "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" 1779592660.65029 1999 3d7f854601a06e751f791c04da1dedb0 ""
+["pdflatex"] 1779597304.76839 "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" "main.pdf" "main" 1779597310.01798 0
+  "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" 1779593353.66832 2021 b3827cf80a7a61f9d302c5b789a97ddc ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_edcawa.enc" 1490131464 2833 ab571e969b0d4b8e87f8f63627b1db02 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc" 1490131464 2822 11e839d2bbb939844844619b2cff7df6 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_lyu3x3.enc" 1490131464 2835 bfce207f80837ef8737b6a788d8bc760 ""
@@ -282,11 +282,12 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1740076572 8221430 a23cd5bc61ef5b28299cf12b0437b99e ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "kian.sty" 1779592659.55114 814 ab78d85eae77302d8548ba6d7ff2ed6a ""
-  "main.aux" 1779592665.952 1460 bc64d58136879c9351aca315aa35b19b "pdflatex"
-  "main.out" 1779592665.95271 1023 17284bebd0aa4d5e91b87fadfcb12459 "pdflatex"
-  "main.tex" 1779592660.65029 1999 3d7f854601a06e751f791c04da1dedb0 ""
-  "main.toc" 1779592665.95299 408 2d24580175fb9ac91b6b4582e7a46b48 "pdflatex"
-  "may6.tex" 1779592611.60118 10463 9413cc00d77a20cd7691f6bc337a8d2a ""
+  "main.aux" 1779597309.80889 1888 e95ecca654c2b39ce4d72d6ac8295c1d "pdflatex"
+  "main.out" 1779597309.80964 1803 99d4da8dd098b494fc228672bd657168 "pdflatex"
+  "main.tex" 1779593353.66832 2021 b3827cf80a7a61f9d302c5b789a97ddc ""
+  "main.toc" 1779597309.80994 713 f9c65b1c136cd7c7e4314bb502106c3a "pdflatex"
+  "may6.tex" 1779593146.27397 10466 dca746fddbb8f21e11bf5cdc76a8a75b ""
+  "may8.tex" 1779597302.45487 2293 d677cba9b4670df8027286d462fa1409 ""
   (generated)
   "main.aux"
   "main.log"
