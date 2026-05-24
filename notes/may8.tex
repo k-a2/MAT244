@@ -22,11 +22,56 @@ which is an equation we can solve (see exercises).
 
 \subsection{Integrating Factors with Linear First Order ODEs}
 
-In the last lecture, we learned how to solve ODEs of the form $\frac{dy}{dx} = -ay + b$, where $a$, $b \in \RR$. We did so by directly integrating the equation. However, this method of solution does not work for all ODEs.
-
-For this section, we will be working with equations of the form $\frac{dy}{dx} + p(x)y = g(x)$, where $p$ and $g$ are functions of the independent variable $t$. We cannot solve differential equations of this form with direct integrations, so we introduce a new method of solutions called integrating factors, with $\mu(t)$ being the integrating factor.
+In this section, we will be working with equations of the form $\frac{dy}{dx} + p(x)y = g(x)$, where $p$ and $g$ are functions of the independent variable $t$. We ,introduce a new method of solutions called integrating factors, with $\mu(t)$ being the integrating factor.
 
 \begin{example}
-    Solve the differential equation $y' + 2y = 1$.
+    Solve the differential equation $y' + 2y = 1$ using integrating factors.
 \end{example}
+\begin{solution}
+    The first step in solving an ODE with integrating factors is to multiply the entire equation by a function $\mu(t)$ which we will choose so the entire function is readily integrable. We have:
+    \begin{align}
+        \mu(t)\frac{dy}{dt} + \mu(t)2y = \mu(t)
+    \end{align}
+    The second step is to try and find the value of $\mu(t)$ such that this equation becomes readily integrable. We do this by considering the left side of Equation $(1)$ as the derivative of some recognizable expression. Observe that the term $\mu(t)\frac{dy}{dx}$ is part of the differentiating product $\mu(t)y$. Indeed if we recall the product rule: 
+    \[\frac{d}{dt}\left[\mu(t)y\right] = \mu(t)\frac{dy}{dt} + \frac{d\mu}{dt}y\]
+    we can find the integrating factor $\mu(t)$ by setting $\mu(t)2y = \frac{d\mu}{dt}y$. Isolating $\mu(t)$ we obtain:
+    \begin{align*}
+        &\hspace{1cm} \frac{1}{\mu(t)}d\mu = 2 dt \\
+        &\implies \int \frac{1}{\mu(t)}d\mu = \int 2 dt \\
+        &\implies \ln|\mu(t)| + 2t + C \\
+        &\implies \mu(t) = e^{2t + C} \\
+        &\implies \mu(t) = Ae^{2t}
+    \end{align*}
+    Hence Equation $(1)$ becomes (we can cancel out the constant $A$):
+    \begin{align}
+        e^{2t}\frac{dy}{dt} + e^{2t}2y = e^{2t}    
+    \end{align}
+    We remark that now the left side of Equation $(2)$ is obviously the derivative of the product $e^{2t}y$, so we can simplify the leftside furthermore to obtain:
+    \[\frac{d}{dt}\left[e^{2t}y\right] = e^2t\]
+    The third step is to integrate both sides of the Equation $(3)$, which we can now do with the chosen integrating factors, and isolate $y$. Remark that on the left side of the equation the derivative and integral cancel each other out:
+    \begin{align*}
+    &\hspace{1cm} \cancel{\int \frac{d}{dt}}\left[e^{2t}y\right] \cancel{dt} = \int e^{2t} dt \\
+    &\implies e^{2t}y = \frac{e^2t}{2} + C \\
+    &\implies y = \frac{1}{2} + Ce^{-2t} \qedhere
+    \end{align*}
+\end{solution}
 
+\begin{remark}
+    For ODEs of the form $\frac{dy}{dt} + p(t)y = g(t)$, the integrating factor is always of the form $\mu(t) = \exp \int p(t)dt$.
+\end{remark}
+
+\begin{example}
+    Solve the differential equation $y' + 2ty = e^{-x^2}$ using integrating factors.
+\end{example}
+\begin{solution}
+    We begin by multiplying the equation by the integrating factor $\mu(t)$:
+    \begin{align}
+        \mu(t)y' + \mu(t)2ty = \mu(t)e^{-x^2}
+    \end{align}
+    We first note that $p(t) = 2t$ and $g(t) = e^{-x^2}$. Using the remark above, we find that:
+    \begin{align*}
+        & \hspace{1.2cm} \mu(t) = \exp \int 2t dt \\ 
+        &\iff \mu(t) = e^{t^2 + C} \\
+        &\iff \mu(t) = Ae^{t^2}
+    \end{align*}
+\end{solution}

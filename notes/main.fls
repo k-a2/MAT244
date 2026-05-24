@@ -561,6 +561,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLiberti
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txexs.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsym.pfb
