@@ -61,17 +61,25 @@ In this section, we will be working with equations of the form $\frac{dy}{dx} + 
 \end{remark}
 
 \begin{example}
-    Solve the differential equation $y' + 2ty = e^{-x^2}$ using integrating factors.
+    Solve the differential equation $y' + 2ty = e^{-t^2}$ using integrating factors.
 \end{example}
 \begin{solution}
     We begin by multiplying the equation by the integrating factor $\mu(t)$:
     \begin{align}
-        \mu(t)y' + \mu(t)2ty = \mu(t)e^{-x^2}
+        \mu(t)y' + \mu(t)2ty = \mu(t)e^{-t^2}
     \end{align}
     We first note that $p(t) = 2t$ and $g(t) = e^{-x^2}$. Using the remark above, we find that:
     \begin{align*}
         & \hspace{1.2cm} \mu(t) = \exp \int 2t dt \\ 
         &\iff \mu(t) = e^{t^2 + C} \\
         &\iff \mu(t) = Ae^{t^2}
+    \end{align*}
+    So Equation $(3)$ becomes:
+    \[ e^{t^2}\frac{dy}{dt} + 2te^{t^2}y = 1 \]
+    We recognize the left side of the equation as the derivative of the product $\mu(t)y$. Integrating both sides of the equation yields:
+    \begin{align*}
+        & \hspace{1cm} \cancel{\int \frac{d}{dt}}\left[e^{t^2}y\right] \cancel{dt} = \int dt \\
+        & \implies e^{t^2}y = t + C \\
+        & \implies y = e^{-t^2}(t + C) \qedhere
     \end{align*}
 \end{solution}

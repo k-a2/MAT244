@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1779629117.901 "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" "main.pdf" "main" 1779629123.1615 0
+["pdflatex"] 1779659600.81326 "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" "main.pdf" "main" 1779659606.09429 0
   "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" 1779628359.33248 2073 5230f0b4dbd73e7e000868e2a8768e12 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_edcawa.enc" 1490131464 2833 ab571e969b0d4b8e87f8f63627b1db02 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc" 1490131464 2822 11e839d2bbb939844844619b2cff7df6 ""
@@ -283,12 +283,12 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1740076572 8221430 a23cd5bc61ef5b28299cf12b0437b99e ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "kian.sty" 1779592659.55114 814 ab78d85eae77302d8548ba6d7ff2ed6a ""
-  "main.aux" 1779629122.95002 1889 3432bdc348af4bb0b53d492d16e936a1 "pdflatex"
-  "main.out" 1779629122.9508 1803 99d4da8dd098b494fc228672bd657168 "pdflatex"
+  "main.aux" 1779659605.88512 1889 3432bdc348af4bb0b53d492d16e936a1 "pdflatex"
+  "main.out" 1779659605.88584 1803 99d4da8dd098b494fc228672bd657168 "pdflatex"
   "main.tex" 1779628359.33248 2073 5230f0b4dbd73e7e000868e2a8768e12 ""
-  "main.toc" 1779629122.95113 713 f9c65b1c136cd7c7e4314bb502106c3a "pdflatex"
+  "main.toc" 1779659605.88614 713 f9c65b1c136cd7c7e4314bb502106c3a "pdflatex"
   "may6.tex" 1779593146.27397 10466 dca746fddbb8f21e11bf5cdc76a8a75b ""
-  "may8.tex" 1779629112.42369 4704 3d732e7a9249671e4bcfd7ad1b63bdc2 ""
+  "may8.tex" 1779659600.58491 5140 d195052a422066edd9a2854d51f0311f ""
   (generated)
   "main.aux"
   "main.log"
