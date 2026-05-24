@@ -1,96 +1,70 @@
 \documentclass[12pt, letterpaper]{article}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.18} 
-\usepackage{xcolor}
-\usepackage{hyperref}
-\usepackage{fancyhdr}
-\usepackage{amsfonts}
-\usepackage{tikz,lmodern}
-\usepackage[most]{tcolorbox}
-\usepackage{wrapfig}
-\usepackage{graphics}
-\usepackage[justification=centering]{caption}
-\usepackage{float}
-\usepackage{menukeys}
-\usepackage{amsmath, amssymb, amsthm}
-\usepackage[mono=false]{libertine}
-\usepackage[libertine]{newtxmath}
-\usepackage[bb=ams, cal=cm]{mathalfa}
-\usepackage{geometry}
-\usepackage{enumitem}
-\usepackage{mathrsfs}
-\usepackage{esint}
-\usepackage[dvipsnames]{xcolor}
-\usepackage[]{hyperref}
-\usepackage[sf,it]{titlesec}
-\usepackage{cancel}
-\usepackage[skip=0.2cm, indent=0pt]{parskip}
-\numberwithin{equation}{section}
-\tcbuselibrary{theorems} 
+% My .sty:
+\usepackage{kian}
 
-\newtcbtheorem[number within=section]{defbox}{Definition}
+\newcounter{mycounter}[section]
+\renewcommand{\themycounter}{\thesubsection.\arabic{mycounter}}
+\newtcolorbox{defbox}
 {
+    code={\refstepcounter{mycounter}},
+    title={Definition \themycounter},
     colframe = cyan!70,
     colback  = cyan!10,
     fonttitle = \bfseries
-    
-}{def}
+}
 
-\newtcbtheorem[use counter from=defbox]{thmbox}{Theorem}
-{
+\newtcolorbox{thmbox}[1][]{
+    code={\refstepcounter{mycounter}},
+    title={Theorem \themycounter\ifstrempty{#1}{}{ (#1)}},
     colframe = violet!70,
     colback  = violet!10,
     fonttitle = \bfseries
-}{thm}
+}
 
-\newtcbtheorem[use counter from=defbox]{propbox}{Proposition}
-{
+\newtcolorbox{propbox}[1][]{
+    code={\refstepcounter{mycounter}},
+    title={Proposition \themycounter\ifstrempty{#1}{}{ (#1)}},
     colframe = brown!70,
     colback  = brown!10,
     fonttitle = \bfseries
-}{thm} 
+}
 
+\newtcolorbox{lemmabox}{
+    code={\refstepcounter{mycounter}},
+    title={Lemma \themycounter},
+    colframe = magenta!70,
+    colback  = magenta!10,
+    fonttitle = \bfseries
+}
 
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{example}{Example}[section]
+\newtcolorbox{warning}
+{
+    title={Warning},
+    colframe = red!70,
+    colback  = red!10,
+    fonttitle = \bfseries
+}
 
-\newtheoremstyle{solutionstyle} 
-  {6pt}   
-  {6pt}  
-  {\normalfont} 
-  {}      
-  {\itshape} 
-  {.}     
-  { }    
-  {}      
-\theoremstyle{solutionstyle}
-\newtheorem*{solution}{Solution}
+\theoremstyle{definition}
+\newtheorem{example}[mycounter]{Example}
 
-
-
-\geometry{letterpaper, margin=1in, headheight=15pt}
-\newcommand*{\chili}{\textcolor{red}{\faPepperHot}}
-
-
-
-\newtcbtheorem[number within=section]{tctheorem}{Theorem}%
-{theorem style}{th}
+\newenvironment{solution}[1][Solution]{
+  \begin{proof}[#1]
+  \renewcommand{\qedsymbol}{$\checkmark$}
+}{
+  \end{proof}
+}
 
 \renewcommand{\bold}[1]{\textbf{#1}}
+\renewcommand{\it}[1]{\textit{#1}}
 \renewcommand{\contentsname}{Table of Contents}
-\newcommand{\RR}{\mathbb{R}}
-\newcommand{\NN}{\mathbb{N}}
-\newcommand{\QQ}{\mathbb{Q}}
-\newcommand{\ZZ}{\mathbb{Z}}
-\newcommand{\CC}{\mathbb{C}}
 
-
-\usetikzlibrary{shadows}
 
 \titlespacing*{\part}{0pt}{0pt}{20pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{ \rightmark}
+\fancyhead[L]{\nouppercase\leftmark}
+\fancyhead[R]{\thepage}
 
 \pgfmathsetmacro{\dmin}{-5}
 \pgfmathsetmacro{\dmax}{5}
@@ -101,29 +75,23 @@
 
 \begin{document}
 \begin{titlepage}
-	\begin{center}
-		\vspace*{3.5cm}
-		\LARGE
-		\textbf{MAT244 (ODEs) Notes}
-		
-		\vspace{1cm}
-		\large
-		By Kian Ahari
-		\vspace{0.5 cm}
+	\begin{titlepage}
+		\begin{flushright}
+			\LARGE
+			\bold{MAT244 (ODEs) Notes}
+			
+			\vspace{0.5cm}
+			\large
+			University of Toronto
+			\vspace{0.5 cm}
 
-        Instructed by Mikale Reddy
-        \vspace{0.5cm}
-
-		Summer 2026
-		\vspace{0.5cm}
-
-        Last Updated \today
-        \vspace{0.5cm}
-        
-        University of Toronto
-        \vfill
-		
-	\end{center}
+			By Kian Ahari
+			\vspace{0.5 cm}
+			
+			Last updated on \today
+			\vfill
+		\end{flushright}
+	\end{titlepage}
 \end{titlepage}
 \newpage
 \thispagestyle{empty}

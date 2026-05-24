@@ -4,7 +4,7 @@
 
 \subsection{What Are Differential Equations?}
 
-An \bold{differential equation} (which I will often abreviate as a \bold{DE}) is an equation containing derivatives of an unknown function. The two main types of DEs are \bold{ordinary differential equations}, or \bold{ODEs}, which are equations involving functions depending on a single independent variable, and \bold{partial differential equations}, or \bold{PDEs}, which are equations involving functions which depend on more than one independent variable. For example, the equation:
+An \bold{differential equation}, which I will often abreviate as a \bold{DE}, is an equation containing derivatives of an unknown function. The two main types of DEs are \bold{ordinary differential equations}, or \bold{ODEs}, which are equations involving functions depending on a single independent variable, and \bold{partial differential equations}, or \bold{PDEs}, which are equations involving functions which depend on more than one independent variable. For example, the equation:
 \[ \frac{d^2u}{dt^2} + \frac{du}{dt} + u = f(t) \]
 is an ODE that depends on the independent variable $t$. The equation:
 \[ -\partial_t^2u + \partial_x^2u + + \partial_y^2u + \partial_z^2u = 0 \]
@@ -12,10 +12,10 @@ is an example of a PDE that depends on multiple independent variables $x$, $y$, 
 
 
 \begin{example}
-    Consider the following differential equation:
+    Consider the following ODE:
 \end{example}
     \[ \frac{dy}{dt} = -y(t) + t \]
-    We know that this is an ODE, but what does it represent? From calculus, we know that $dy/dt$ is the derivative of $y(t)$, and that this derivative represents how fast the function $y$ is changing with respect to $t$. Since we have that $dy/dt = -y(t) + t$, we can infer that $t$ will decrease as $y$ increases and will tend to increase as $t$ increases.
+    How can we determine what this equation represents? From calculus, we know that $dy/dt$ is the derivative of $y(t)$, and that this derivative represents how fast the function $y$ is changing with respect to $t$. Since we have that $dy/dt = -y(t) + t$, we can infer that $t$ will decrease as $y$ increases and will tend to increase as $t$ increases.
 
     Recall that $\frac{dy}{dt}\big|_p$ represents the slope of $y(t)$ passing through the point $p$. We can thus say that the \bold{direction} of $y(t)$ at point $t = t_0$ is equal to $-y(t_0) + t_0$. With this information, we can plot a \bold{direction field} (or \bold{slope field}) for this differential equation:
 
@@ -36,12 +36,17 @@ is an example of a PDE that depends on multiple independent variables $x$, $y$, 
          \end{tikzpicture}
          \caption{The slope field for the equation $\frac{dy}{dt} = -y(t) + t$}
      \end{figure}
-      
+
+
+
+
+  
      Remark that, in accordance with our intuition, the slope decreases as we move up the $y$ axis and it increases as we move up the $t$ axis. Each line segment in Figure 1 represents the slope of the equation at one of its solutions. Note that if we travel along the line $y(t) = t$, we see that the slope of the solution is always zero. We say that the line $y(t) = t$ is the \bold{equilibrium solution} of the DE and that it does not change with respect to time (i.e. $\frac{dy}{dt} = 0$):
 
+    
      \begin{figure}[H]
         \centering
-        \begin{tikzpicture}[scale=0.75, transform shape]
+        \begin{tikzpicture}[scale=0.6, transform shape]
             \draw[->] (\dmin-0.4, 0) -- (\dmax+0.4, 0) node[right] {$t$};
             \draw[->] (0, \dmin-0.4) -- (0, \dmax+0.4) node[above] (ylabel) {$y$};
             \pgfmathsetmacro{\dminb}{\dmin+0.5}
@@ -58,29 +63,69 @@ is an example of a PDE that depends on multiple independent variables $x$, $y$, 
          \caption{The equilibrium solution (in red) to the equation $\frac{dy}{dt} = -y(t) + t$ is $y(t) = t$.}
      \end{figure}
 
-
      \begin{example}
-    Consider the following differential equation:
-    \[ \frac{dy}{dt} = ay \]
-    where $a \in \RR$. Plot direction fields for $a = -1, 0, 1$.
-\end{example}
+    Consider the differential equation $\frac{dy}{dt} = ay$,
+    where $a \in \RR$. Plot direction fields for $a = -1$,$0$, and $1$. What is/are the equilibrium solution(s)?
+    \end{example}
    \begin{solution}
-   When $a = -1$, we have that $\frac{dy}{dt} = -y$, i.e. the slope of the equation is equal to $-y$. Observe that $\frac{dy}{dt}$ is independent of $t$ and therefore will not change with respect to $t$. The direction field is as follows:
+   When $a = -1$, we have that $\frac{dy}{dt} = -y$, i.e. the slope of the equation is equal to $-y$. Observe that $\frac{dy}{dt}$ does not change when $t$ changes. The direction field is as follows:
+   \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=0.6, transform shape]
+        \draw[->] (\dmin-0.4, 0) -- (\dmax+0.4, 0) node[right] {$t$};
+        \draw[->] (0, \dmin-0.4) -- (0, \dmax+0.4) node[above] (ylabel) {$y$};
+        \pgfmathsetmacro{\dminb}{\dmin+0.5}
+         \foreach \x in {\dmin,\dminb,...,\dmax} {
+             \foreach \y in {\dmin,\dminb,...,\dmax} {
+              \pgfmathsetmacro{\m}{-\y}
+                 \pgfmathsetmacro{\dt}{(\len/2)/sqrt(1+\m*\m)}
+                 \pgfmathsetmacro{\dy}{\m*\dt}
+                 \draw[gray, very thick] (\x-\dt,\y-\dy) -- (\x+\dt,\y+\dy);
+                }
+         }   
+     \end{tikzpicture}
+     \caption{The direction field for $\frac{dy}{dt} = -y$.}
+ \end{figure}
+    Observe that the slope of the equation is equal to the value of $-y$. For example, when $y = 1$, we have that $\frac{dy}{dt} = -1$. Furthermore note that $\frac{dy}{dt}$ is independent of $t$ and hence does not change as $t$ changes. The equilibrium solution for this system is the x-axis $y = 0$. 
 
+    The direction field for $a = 1$, i.e. $\frac{dy}{dt} = y$, can be plotted in a very similar way.
+
+    When $a = 0$, we have that $\frac{dy}{dt} = 0$. Hence the slopes in the direction field will equal zero for all $t$ and $y$:
+
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}[scale=0.6, transform shape]
+            \draw[->] (\dmin-0.4, 0) -- (\dmax+0.4, 0) node[right] {$t$};
+            \draw[->] (0, \dmin-0.4) -- (0, \dmax+0.4) node[above] (ylabel) {$y$};
+            \pgfmathsetmacro{\dminb}{\dmin+0.5}
+             \foreach \x in {\dmin,\dminb,...,\dmax} {
+                 \foreach \y in {\dmin,\dminb,...,\dmax} {
+                  \pgfmathsetmacro{\m}{0}
+                     \pgfmathsetmacro{\dt}{(\len/2)/sqrt(1+\m*\m)}
+                     \pgfmathsetmacro{\dy}{\m*\dt}
+                     \draw[gray, very thick] (\x-\dt,\y-\dy) -- (\x+\dt,\y+\dy);
+                    }
+             }   
+         \end{tikzpicture}
+         \caption{The direction field for $\frac{dy}{dt} = 0$. }
+     \end{figure}
+
+     Since the slope is always zero, any line passing through the direction field will have slope zero. There are hence infinitely many equilibrium  solutions. \qedhere
 
    \end{solution}
-
 
 \subsection{Solutions of Differential Equations}
 
 We ``solve'' differential equations of the form $dy/dt = f(t, y)$ by finding a function $y(t)$ that satisfies it.
 
 \begin{example}
-    Solve $y' = 2y(t)$
+    Solve the differential equation $\frac{dy}{dx} = 2y(t)$.
 \end{example}
 \begin{solution}
     First, rewrite the equation so that all the terms with $y$ appear on one side of the equation and all the terms with $t$ appear on the other:
     \[\frac{dy}{dt} = 2y \implies \frac{dy}{y} = 2dt\]
+    Though it may seem bizarre that we separated $dy/dt$ into two components, we are allowed to do so when solving DEs. We will provide more justified reasoning for doing so in the next lecture.
+    
     Now we integrate both sides:
     \begin{align*}
     & \int \frac{dy}{y} = \int 2dt \\
@@ -97,22 +142,21 @@ We ``solve'' differential equations of the form $dy/dt = f(t, y)$ by finding a f
     Lastly let us check our work by integrating $y(t)$ and ensuring it matches the given equation:
     \begin{align*}
     & y' = 2Ae^{2t} \\
-    & y' = 2y(t)  \checkmark
+    & y' = 2y(t)  \qedhere
     \end{align*}
 \end{solution}
 
 Suppose that we are also given an initial condition, for instance suppose for the previous example that $y(0) = 1$. This initial condition uniquely determines the value of the constant and hence the function $y$. With the above example, if we assume $y(0) = 1$, then we find that:
-
-\begin{align}
+\begin{align*}
     & y(0) = 1 = Ae^{2(0)} \\
     & 1 = A
-\end{align}
+\end{align*}
 
 \begin{example}
-    Solve $\frac{dy}{dx} = 3y - 2$, with the initial value $y(0) = 2$.
+    Solve the ODE $\frac{dy}{dx} = 3y - 2$, given the initial condition $y(0) = 2$.
 \end{example}
 \begin{solution}
-    First put all the terms with $y$ on one side and the terms with $x$ on the other:
+    First, rearrange the equation so that all the terms with $y$ are on one side and all the terms with $x$ are on the other (remember we are allowed to split $\frac{dy}{dx}$ into components):
     \[ \frac{1}{3y - 2}dy = dx \]
     Now integrate both sides:
     \begin{align*}
@@ -140,7 +184,6 @@ Suppose that we are also given an initial condition, for instance suppose for th
 
 The \textbf{order} of a DE is the highest derivative in the equation. For example, the order of $y' = y(t)$ is 1, and the order of $y'' + y + t = y(t)$ is 2. The general form of an order $n$ DE is:
 \[ F(x, u(x), u'(x), u''(x), \dots, u^{(n)}(x)) = 0\]
-
 A solution of the ODE $y^{(n)} = f(x,y, y', \dots, y^{(n-1)})$ on the interval $a < x < b$ is a function $\phi$ such that $\phi', \phi'', \dots, \phi^{(n)}$ exists and satisfies $\phi^{(n)} = f(x, \phi, \phi', \dots, \phi^{(n-1)})$ for all $x \in (a, b)$. Note that $\phi$ and all necessary derivatives must exist on $a < x < b$ and $\phi$ must satisfy the differential equation.
 
 For example, consider $y'' + y = 0$, or $y'' = -y$. Solutions to this DE will be of the form $e^{ix}$ or make use of sines and cosines (for instance, it is easy to check that $y = \sin(x) + \cos(x)$ is a solution). However, naturally the question arises: does a solution always exist, if so it is unique? And how do we find it? We will learn how to answer those questions in the next lecture. 
