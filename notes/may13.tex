@@ -52,3 +52,105 @@
 \end{solution}
 
 \subsection{Separable Equations}
+
+We learned how to use integrating factors to solve differential equations of the form $\frac{dy}{dt} + p(x)y = g(x)$. We will now shift our focus to differential equations of the form $\frac{dy}{dt} = f(y)g(t)$. We say this class of differential equations are \bold{separable}, and we can solve them by putting like variables on the same sides of the equality, and then integrating both sides.
+
+\begin{example}[Newton's Law of Cooling]
+    Consider the following ODE:
+    \[\frac{dB}{dt} = K(E - B)\]
+    where $E, K \in \RR$, with the initial condition $B(0) = B_0$. To solve this equation, we begin by putting variables with $B$ on the left side, and variables with $t$ (there are none) on the right side:
+    \[\frac{dB}{E - B} = K dt\]
+    Integrating both sides yields:
+    \begin{align*}
+        &\hspace{1cm} \int \frac{dB}{E - B} = \int K dt \\
+        &\implies -\ln|E - B| = Kt + C \\
+        &\implies \ln|E - B| = -Kt - C \\
+        &\implies E - B = \pm e^{-Kt - C} \\
+        &\implies -B = Ae^{-Kt} - E \\
+        &\implies B = E - Ae^{-Kt} 
+    \end{align*}
+    where $A = \pm e^{-C}$. We have that $B(0) = B_0$, so we can find the value of $A$ given the initial value:
+    \begin{align*}
+        &\hspace{1cm} B_0 = E - A \\
+        &\implies A = E - B_0
+    \end{align*}
+    Hence the solution to the ODE is:
+    \[B(t) = E - (E - B_0)e^{-Kt}\]
+\end{example} 
+
+\begin{example}
+    Solve the differential equation $\frac{dy}{dt} = 6y^2t$, given the initial condition $y(1) = \frac{1}{3}$. Additionally, find the interval of valid solutions for $t$.
+\end{example}
+\begin{solution}
+    We will solve this equation by separation. First, bring all terms with $y$ on the left side and all with $t$ on the right side:
+    \[\frac{dy}{y^2} = 6t dt\]
+    Integrating both sides of the equation yields:
+    \begin{align*}
+        &\hspace{1cm} \int \frac{dy}{y^2} = \int 6t dt \\
+        & \implies \frac{-1}{y} = 3t^2 + C \\
+        & \implies y = \frac{-1}{3t^2 + C}
+    \end{align*}
+    Now, find $C$ using the initial value $y(1) = \frac{1}{3}$:
+    \begin{align*}
+        &\hspace{1cm} \frac{1}{3} = \frac{-1}{3 + C} \\
+        & \implies 3 = -3 - C \\
+        & \implies C = -6
+    \end{align*}
+    So the solution to the equation is:
+    \[y = \frac{-1}{3t^2 - 6}\]
+    Now to find valid solutions for $t$, we need to find the restrictions on the solution we found above. We know that $3t^2 - 6 \neq 0 \implies 3t^2 \neq 6 \implies t \neq \pm\sqrt{2}$. So the interval of valid solutions for $t$ is:
+    \[t = \{t \in \RR \colon t \neq \pm \sqrt{2}\}\]
+    This implies that the solutions are discontinuous at points $t = -\sqrt{2}$ and $t = \sqrt{2}$.
+\end{solution}
+
+\begin{example}
+    Solve the differential equation $\frac{dy}{dt} = \frac{ty^3}{1 + t^2}$ with the initial condition $y(0) = 1$.
+\end{example}
+\begin{solution}
+    We will solve by separation. We first bring all terms with $y$ on the left side and all with $t$ on the right:
+    \[\frac{dy}{y^3} = \frac{t}{1 + t^2}dt\]
+    Integrating both sides yields:
+    \begin{align*}
+        &\hspace{1cm} \int \frac{dy}{y^3} = \int \frac{t}{1 + t^2}dt \\
+        & \implies \frac{-1}{2y^2} = \frac{1}{2}\ln|1 + t^2| + C \\
+        &\implies y^{-2} = -\ln|1 + t^2| - 2C \\
+        &\implies y^2 = \frac{1}{-\ln|1 + t^2| - 2C} \\
+        &\implies y = \pm\frac{1}{\sqrt{-\ln|1 + t^2| - 2C}}
+    \end{align*}
+    Using the intial condition $y(0) = 1$ we solve for $C$:
+    \begin{align*}
+        &\hspace{1cm} 1 = \pm \frac{1}{\sqrt{-2C}} \\
+        &\implies \pm\sqrt{-2C} = 1 \\
+        &\implies -2C = 1 \\
+        &\implies C = \frac{-1}{2}
+    \end{align*}
+    So the solution to the equation is:
+    \[y = \frac{1}{\sqrt{1 - \ln|1 + t^2|}} \qedhere\] 
+\end{solution}
+
+\begin{example}
+    Solve the differential equation $\frac{dy}{dt} = e^{y - t}\sec(y)(1 + t^2)$ with the intiial condition $y(0) = 0$. 
+\end{example}
+\begin{solution}
+    Again, we proceed by separating $y$ and $t$:
+    \begin{align*}
+        &\hspace{1.2cm }\frac{dy}{e^y\sec(y)} = e^{-t}(1 + t^2)dt \\
+        &\iff e^{-y}\cos(y) dy =  e^{-t}(1 + t^2)dt
+    \end{align*}
+    Integrating both sides can be done by using integration by parts on both integrals, though for brevity I will omit those calculations:
+    \begin{align*}
+        &\hspace{1cm} \int e^{-y}\cos(y) dy =  \int e^{-t}(1 + t^2)dt \\
+        &\implies \frac{e^{-y}(\sin(y) - \cos(y))}{2} = e^{-t}(t^2 + 2t + 3) + C  \\
+        &\implies e^{-y}(\sin(y) - \cos(y)) = 2e^{-t}(t^2 + 2t + 3) + 2C
+    \end{align*}
+    This is unfortunately the best we can simplify the equation, but we can still solve for $C$ using the condition $y(0) = 0$:
+    \begin{align*}
+        &\hspace{1cm} 1 = 6 + 2C \\
+        &\implies C = \frac{-5}{2}
+    \end{align*}
+    So an implicit solution to the differential equation is:
+    \[e^{-y}(\sin(y) - \cos(y)) = 2e^{-t}(t^2 + 2t + 3) - 5\]
+\end{solution}
+
+
+
