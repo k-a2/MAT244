@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1779677144.21986 "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" "main.pdf" "main" 1779677149.68281 0
-  "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" 1779660412.59499 2107 c3e0619b4ac5bfc45a2464cd585e0667 ""
+["pdflatex"] 1779761948.49362 "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" "main.pdf" "main" 1779761953.89704 0
+  "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" 1779677388.12225 2154 c8f9f96c20254a9f1cae7f1c09c7bb5c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_edcawa.enc" 1490131464 2833 ab571e969b0d4b8e87f8f63627b1db02 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc" 1490131464 2822 11e839d2bbb939844844619b2cff7df6 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_lyu3x3.enc" 1490131464 2835 bfce207f80837ef8737b6a788d8bc760 ""
@@ -283,11 +283,13 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1740076572 8221430 a23cd5bc61ef5b28299cf12b0437b99e ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "kian.sty" 1779592659.55114 814 ab78d85eae77302d8548ba6d7ff2ed6a ""
-  "main.aux" 1779677149.45818 2300 fe7b09ee069f2bdd1cc3ea2f678908b8 "pdflatex"
-  "main.out" 1779677149.45953 2471 ae9f764ef901224a2cf748011092150f "pdflatex"
-  "main.tex" 1779660412.59499 2107 c3e0619b4ac5bfc45a2464cd585e0667 ""
-  "main.toc" 1779677149.45996 1001 b95d16add4e0e1ceb3946264fba558fe "pdflatex"
+  "main.aux" 1779761953.68484 2596 1befa85b8d5af738164380b96cd12004 "pdflatex"
+  "main.out" 1779761953.68562 3045 f100eebacf12c1cbb0bbf576e040cb8f "pdflatex"
+  "main.tex" 1779677388.12225 2154 c8f9f96c20254a9f1cae7f1c09c7bb5c ""
+  "main.toc" 1779761953.6859 1215 22058bcae264b9e75100f0d03a4ec35b "pdflatex"
   "may13.tex" 1779677144.00009 7155 82d6849fd065fe3b7d98c3c0741a4134 ""
+  "may20.tex" 1779761942.5026 117 6268a8ee6d2a44951714801d00e933e2 ""
+  "may22.tex" 1779677385.51304 0 d41d8cd98f00b204e9800998ecf8427e ""
   "may6.tex" 1779593146.27397 10466 dca746fddbb8f21e11bf5cdc76a8a75b ""
   "may8.tex" 1779659924.40141 5140 f299fec9f543ba7747d7b8cb06e337aa ""
   (generated)
