@@ -2,3 +2,87 @@
 
 \subsection{Modelling}
 
+When modelling differential equations there are three important steps to follow:
+\begin{enumerate}
+    \item \bold{Translation}: this step involves understanding the problem, assigning variables to unknown quantities and developing equation(s) that describe the physical phenomena.
+    \item \bold{Solving}: here, we decide whether to solve the system numerically or analytically, approximately or exactly, etc.. Our goal  here is to bring all information about the problem to bear.
+    \item \bold{Interpret}: ensure that your answer you found in the previous step makes sense. Is your solution unique? Is it stable?
+\end{enumerate}
+
+\begin{example}[Radioactive Decay]
+    Consider the following differential equation, which represents decay of a radioactive isotope:
+    \[\frac{dN}{dt} = -\lambda N(t)\]
+    In this example, $N(t)$ is the number of the radioactive isotope and $\lambda > 0$ is the decay constant. This equation can easily be solved using separation:
+    \begin{align*}
+        &\hspace{1cm}\frac{dN}{N(t)}= -\lambda dt \\
+        & \implies \int \frac{dN}{N(t)} = \int -\lambda dt \\
+        & \implies \ln|N(t)| = -\lambda t + C \\ 
+        & \implies N(t) = Ae^{\lambda t}
+    \end{align*}
+    We remark that as $t \to \infty$, $N(t) \to 0$, which makes sense as the isotope is decaying.
+\end{example}
+
+\begin{example}[Newton's Law of Cooling]
+    Suppose that we immerse a body in an environment with constant temperature $E$. Let $B(t)$ be the function representing the temperature of the body. We can represent the heat conductivity of the object with the equation:
+    \[\frac{dB}{dt} = K(E - B(t))\]
+    where $K > 0$ represents how well the body's material conducts heat. We can solve this equation by separation, which gives:
+    \[B(t) = E - \frac{E - B_0}{e^{Kt}}\]
+\end{example}
+
+\begin{example}[Falling Bodies]
+    We represent the fall of a body with mass $m$ with net forces $F(t, v)$ and acceleration $\frac{dv}{dt}$ using the differential equation:
+    \[m \frac{dv}{dt} = F(t,v)\]
+    For this class assume that downward displacements and forces are negative. Assume also that the force of gravity, $F_g = -mg$ where $g = 10 m/s^2$. 
+
+    Additionally, we have kinematic equations for acceleratio $\mathbf{a}$, velocity $\mathbf{v}$, and displacement $\mathbf{r}$:
+    \begin{align*}
+        &\mathbf{a} = \frac{d\mathbf{v}}{dt} = \frac{d^2\mathbf{r}}{dt^2} \\
+        &\mathbf{v} = \int \mathbf{a} dt = \mathbf{a}t + v_0 \\
+        &\mathbf{r} = \int \mathbf{a}t + v_0 dt = \frac{1}{2}\mathbf{a}t^2 + v_0t + r_0
+    \end{align*}
+    We will use these equations to solve the following exercise:
+\end{example}
+
+\begin{example}
+    A 50kg object is shot from a cannon straight up with an initial velocity of $10 m/s$ off the very tip of a bridge. If the air resistance is given by $5\mathbf{v}$ determine the velocity of the object at any time $t$.
+\end{example}
+\begin{solution}
+    We have that:
+    \[ m \frac{dv}{dt} = -10m - 5v \]
+    Which can be written as:
+    \[ \frac{dv}{dt} + \frac{5}{m}v = -10\]
+    Let us solve this system using integrating factors. Let $\mu(t) = \exp \int p(t) \implies \mu(t) = \exp(\frac{5}{m}t)$. Multiplying the equation by the integrating factor gives:
+\end{solution}
+    \begin{align*}
+        &\hspace{1.2cm} e^{5t/m}\frac{dv}{dt} + \frac{5}{m}e^{5t/m}v = -10e^{5t/m} \\
+        &\iff \frac{d}{dt}\left[e^{5t/m}v\right] = -10e^{5t/m} \\
+        &\iff e^{5t/m}v = \int -10e^{5t/m} dt \\
+        &\iff v = -2m + Ce^{-5t/m}
+    \end{align*}
+    Since we know $v(0) = 0$ and $m = 50$, we have:
+    \begin{align*}
+        &\hspace{1cm} v(0) = 0 = -100 + C \\
+        &\implies C = 100
+    \end{align*}
+    So the velocity of the object at time $t$ is:
+    \[v(t) = -100 + 100e^{-t/10} \qedhere \]
+
+\subsection{Autonomous Equations}
+
+\begin{defbox}
+    We say a first order DE is \bold{autonomous} if the independent variable does not appear explicitly in the equation. For example, the ODE $\frac{dy}{dt} = f(y)$ is autonomous as it depends on $y$ alone.
+\end{defbox}
+
+We have already seen some examples of autonomous ODEs in the first lecture, we will now classify certain two main types of autonomous ODEs:
+
+\begin{defbox}
+    We say an autonomous ODE is \bold{exponential} if it can be written in the form $\frac{dy}{dt} = ry$, where $r \neq 0$. If $r$ is positive, we say the equation represents \bold{exponential growth}, whereas if it is negative, the equation represents \bold{exponential decay}.
+\end{defbox}
+
+Now let us modify the exponential growth equation $\frac{dy}{dt} = ry$ such that $\frac{dy}{dt} \approx ry$ when $y$ is small, and $\frac{dy}{dt} \to 0$ as $y \to K$, where $K$ is the population that can be sustained. We write the equation as:
+\[\frac{dy}{dt} = ry\left(1 - \frac{y}{K}\right)\]
+where the term $\left(1 - \frac{y}{K}\right)$ is close to 1 when $y$ is small, and is close to 0 when $y \to K$. 
+
+\begin{defbox}
+    We say an autonomous ODE is \bold{logistic} if it can be written in the form $\frac{dy}{dt} = r\left(1 - \frac{y}{K}\right)y$, where $r \neq 0$, $K = r/a$ . If $r$ is positive, we say the equation represents \bold{logistic growth}, whereas if it is negative, the equation represents \bold{logistic decay}.
+\end{defbox}
