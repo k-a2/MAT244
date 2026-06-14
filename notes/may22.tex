@@ -1,0 +1,69 @@
+\section{Linear and Non-Linear Equations and Exact Differential Equations}
+
+\subsection{The Existence and Uniqueness Theorem}
+
+Consider a lineaer differential equation. We have the following theorem:
+
+\begin{thmbox}
+   Let $y' + p(x)y = g(x)$ be a linear differential equation with $p(x)$ and $g(x)$ being $C^0$ functions on an open interval $I \colon a < x < b$ containing the point $x = x_0$. Then, there exists a unique function $\phi(x)$ that satisfies the system for each $x \in I$, and that also satisfies the initial condition $y(x_0) = y_0$ where $y_0$ is an arbitrary initial value.
+\end{thmbox}
+
+\begin{proof}
+   Coming soon.
+\end{proof}
+
+If the differential equation is non linear, of the form $y' = f(x,y)$ with initial value $y(x_0) = y_0$, we have an analogous theorem:
+
+\begin{thmbox}
+   Let $f$ and $\frac{\partial f}{\partial y} = \partial_y f = f_y$ be continuous on some open rectangle $a < x < b$ and $c < y < d$ containing the point $x_0, y_0)$. Then, in some interval $x_0 - h < x < x_0 + h$ contained in $a < x < b$, there exists a unique solution $y = \phi(x)$ to the initial value problem.
+\end{thmbox}
+
+\begin{proof}
+   Coming soon.
+\end{proof}
+
+\begin{example}
+   Consider the following first order differential equation:
+   \[ \frac{dy}{dx} = \frac{1 + x^2}{3y - y^2} \]
+   Does this equation satisfy the conditions of Theorem 5.1.2?
+\end{example}
+\begin{solution}
+   First let us consider the function $f(x,y) = (1 + x^2)/(3y - y^2)$. This is continuous if and only if $3y - y^2 \neq 0 \iff y \neq 0$ and $y \neq 3$. The partial derivative with respect to $y$ of $f$ is $f_y = -(1+x^2)(3-2y)/(3y-y^2)$ which is again continuous if and only if $y \neq 0$ and $y \neq 3$. Hence, the existence and uniqueness theorem holds on any rectangle that does not meet the lines $y = 0$ or $y = 3$. In particular, if we consider an arbitrary initial point $(x_0, y_0)$ such that $y_0 \neq 0, 3$, we can find an $h > 0$ such that the IVP has a unique solution on the interval $x_0 - h < x < x_0 + h$. 
+\end{solution}
+
+\subsection{Exact Differential Equations, Part I}
+
+Consider the following first order ODE of the form:
+\[ M(x,y) + N(x,y)\frac{dy}{dx} = 0\]
+If this equation were linear, then we can rewrite it in the form $M(x,y) = M_1(x)y - M_2(x)$ and then solve using integrating factors. However, what do we do when the equation is nonlinear? We can try a different approach if the function is exact.
+
+\begin{defbox}
+   We say the differential equation $M(x,y) + N(x,y)\frac{dy}{dx} = 0$ is \textbf{exact} if $M_y(x,y) = N_(x,y)$, that is the partial derivative of $M$ with respect to $y$ equals the partial derivative of $N$ with repsect to $x$. 
+\end{defbox}
+
+For example, the differential equation $(2x + 3) + (2y - 2)y' = 0$ is exact, as if we let $M = 2x + 3$, $N = 2y - 2$, we see that $M_y = N_x = 0$. However, the equation $(2x + 4y) + (2x - 2y)y' = 0$ is not exact, as if we let $M = 2x + 4y$ and $N = 2x - 2y$, we see that $M_y = 4$ but $N = 2$. 
+
+Naturally, the question arises, how do we solve an exact equation? Let us first define the following derivative:
+
+\begin{defbox}
+   Let $\psi \colon \RR^n \to \RR$ be differentiable with variables $x_1, x_2, \dots, x_n$. We say that the \textbf{total derivative} of $\psi$ with respect to some parameter $t$ is given by:
+   \[ \frac{d\psi}{dt} = \displaystyle\sum_{i = 1}^{n} \frac{\partial \psi}{\partial x_i} \frac{dx_i}{dt} \]
+   
+In this class, we will only consider $\psi(x,y)$ and its total derivative with respect to $x$, which is equal to:
+\[ \frac{d\psi}{dt} = \frac{\partial \psi}{\partial x} \frac{dx}{dx} + \frac{\partial \psi}{\partial x} \frac{dy}{dx} = \frac{\partial \psi}{\partial x} + \frac{\partial \psi}{\partial x} \frac{dy}{dx}\]
+\end{defbox}
+
+If we can find a function $\psi(x,y)$ such that $\frac{\partial \psi}{\partial x} + \frac{\partial \psi}{\partial x} \frac{dy}{dx} = M(x,y) + N(x,y) \frac{dy}{dx} = 0$, then we can write $\frac{\partial \psi}{\partial x} = 0 \implies \psi(x,y) = c$ and we will have solved the system implicitly for $y$.
+
+Our task is hence to find the equation $\psi(x,y)$ such that $\frac{\partial \psi}{\partial x} = M(x,y)$ and $\frac{\partial \psi}{\partial y} = N(x,y)$. 
+
+Observe that:
+\[ \frac{\partial \psi}{\partial x} = M(x,y) \implies \psi(x,y) = \int M(x,y)dx + h(y) \]
+If we now differentiate $\psi(x,y)$ with respect to $y$, we obtain:
+\[ \frac{\partial \psi}{\partial y} = N(x,y) = \int M_y dx + h'(y) \implies h'(y) = N(x,y) - \int M_y dx \]
+
+This says that the right hand side of the equation must only be a function of $y$, so the partial derivative of the right hand side with respect to $x$ must be zero. If this is true, then we only have to find $h(y)$ (by simple integration) and we obtain the implicit solution:
+
+\[ \psi(x,y) = \int M(x,y) dx + h(y) = c \]
+
+This method of solving ODEs may seem complicated. We will do more examples next lecture. 
