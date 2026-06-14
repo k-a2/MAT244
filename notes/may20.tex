@@ -86,3 +86,13 @@ where the term $\left(1 - \frac{y}{K}\right)$ is close to 1 when $y$ is small, a
 \begin{defbox}
     We say an autonomous ODE is \bold{logistic} if it can be written in the form $\frac{dy}{dt} = r\left(1 - \frac{y}{K}\right)y$, where $r \neq 0$, $K = r/a$ . If $r$ is positive, we say the equation represents \bold{logistic growth}, whereas if it is negative, the equation represents \bold{logistic decay}.
 \end{defbox}
+
+We say $r$ is the \textbf{intrinsic growth rate} of the system and $K$ is the system's \textbf{saturation level} or \textbf{carrying capacity}.
+
+Observe that for small $y$, the rate of change is close to 1, but as $y$ tends to $k$, the rate of change approaches 0.
+
+\begin{remark} 
+   Solving the logistic equation (by using separation of variables) yields the following general solution:
+   \[ y(t) = \frac{Ky_0}{y_0 + (K - y_0)e^{-rt}} \]
+      Where $y_0$ is the value of $y(0)$. Observe that as $t \to \infty$, $y \to \frac{Ky_)}{y_0} = K$. 
+\end{remark}

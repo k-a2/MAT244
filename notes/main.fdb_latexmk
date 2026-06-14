@@ -1,6 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1779909750.68397 "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" "main.pdf" "main" 1779909756.17827 0
-  "/Users/kiari2/Documents/GitHub/MAT244/notes/main.tex" 1779677388.12225 2154 c8f9f96c20254a9f1cae7f1c09c7bb5c ""
+["pdflatex"] 1781452841.12962 "main.tex" "main.pdf" "main" 1781452847.31527 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_edcawa.enc" 1490131464 2833 ab571e969b0d4b8e87f8f63627b1db02 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc" 1490131464 2824 67c67e7402c76b84866a6f91f9790b12 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc" 1490131464 2822 11e839d2bbb939844844619b2cff7df6 ""
@@ -288,13 +287,13 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1740076572 8221430 a23cd5bc61ef5b28299cf12b0437b99e ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "kian.sty" 1779592659.55114 814 ab78d85eae77302d8548ba6d7ff2ed6a ""
-  "main.aux" 1779909755.92705 2724 df76846711e32e4af38ba56d0dc78f04 "pdflatex"
-  "main.out" 1779909755.92789 3206 b091a43d22a89f9bac0c2d78fc848874 "pdflatex"
+  "main.aux" 1781452847.03857 2933 4da3bff27059ba06318e44891d353fbd "pdflatex"
+  "main.out" 1781452847.04251 3206 b091a43d22a89f9bac0c2d78fc848874 "pdflatex"
   "main.tex" 1779677388.12225 2154 c8f9f96c20254a9f1cae7f1c09c7bb5c ""
-  "main.toc" 1779909755.92817 1302 c38fa5bea80fc2b1f6f508fbc830011a "pdflatex"
+  "main.toc" 1781452847.04601 1302 c38fa5bea80fc2b1f6f508fbc830011a "pdflatex"
   "may13.tex" 1779677144.00009 7155 82d6849fd065fe3b7d98c3c0741a4134 ""
-  "may20.tex" 1779909745.04243 5354 df7eb483dabb4f54d90d286a4270be07 ""
-  "may22.tex" 1779677385.51304 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "may20.tex" 1781452833.61829 6628 2ed1d0d87076c8085442c0041907c8c6 ""
+  "may22.tex" 1781452228.61661 0 d41d8cd98f00b204e9800998ecf8427e ""
   "may6.tex" 1779593146.27397 10466 dca746fddbb8f21e11bf5cdc76a8a75b ""
   "may8.tex" 1779659924.40141 5140 f299fec9f543ba7747d7b8cb06e337aa ""
   (generated)
