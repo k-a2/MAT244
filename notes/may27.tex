@@ -1,0 +1,146 @@
+\section{Exact ODEs (Part II) and Euler's Method}
+
+\subsection{Examples of Exact ODEs}
+
+\begin{example}
+   Using the method learned last lecture, solve the following differential equation:
+   \[ 2xy^2 + (2x^2y - 3y^2)\frac{dy}{dx} = 0 \]
+\end{example}
+\begin{solution}
+   Let $M(x,y) = 2xy^2$ and $N(x,y) = 2x^2y - 3y^2$. We first verify whether the equation is exact, i.e. whether $M_y = N_x$. We see that $M_y = 4xy = N_x$ and hence the equation is exact. 
+
+   We now define $\psi(x,y)$:
+   \begin{align*}
+      \psi(x,y) &= \int M dx + h(y) \\
+               &=  \int (2xy^2)dx + h(y) \\
+               &=  x^2y^2 + h(y)
+   \end{align*}
+   Now we take the derivative of $\psi$ with respect to $y$, as we know that $\psi_y = N(x,y)$. Using this equality we can find a function $h(y)$ that gives an implicit solution:
+   \begin{align*}
+      N = 2x^2y - 3y^2 &= \psi_y(x,y) \\
+                       &= 2x^2y + h'(y) \\
+                       &\implies h'(y) = -3y^2 \\
+                       &\implies h(y) = -y^3 + C
+   \end{align*}  
+   Hence the implicit solution to the equation is:
+   \[ \psi(x,y) = x^2y^2 -y^3 = C \qedhere\]
+\end{solution}
+
+\begin{example}
+   Consider the following differential equation:
+   \[ (ye^{2xy} + x) + bxe^{2xy}\frac{dy}{dx} = 0 \]
+   Find the value(s) of $b$ that make this equation exact, and solve using the method seen last class.
+\end{example}
+\begin{solution}
+   Let $M(x,y) = ye^{2xy} + x$ and let $N(x,y) = bxe^{2xy}$. We will first verify whether the equation is exact. We see that $M_y = e^{2xy} + 2xye^{2xy}$ and $N_x = be^{2xy} + 2bxye^{2xy}$. We remark that $M_y = N_x$ if and only if $b = 1$. Hence our equation is now exact. 
+
+   We now define $\psi(x,y)$:
+   \begin{align*}
+      \psi(x,y) &= \int M dx + h(y) \\
+                &= \int (ye^{2xy} + x)dx + h(y) \\
+                &= \frac{e^{2xy}}{2} + \frac{x^2}{2} + h(y)
+   \end{align*}
+   Now setting $N = \psi_y$ (with $b = 1$), we obtain
+   \begin{align*}
+      N = xe^{2xy} &= xe^{2xy} + h'(y) \\
+                   &\implies h'(y) = 0 \\
+                   &\implies h(y) = C
+   \end{align*}
+   Hence the implicit solution to the equation (when $b = 1$) is:
+   \[ \psi(x,y) = \frac{e^{2xy}}{2} + \frac{x^2}{2} = C \qedhere \]
+\end{solution}
+\begin{remark}
+   We can also solve the example above by writing $\psi(x,y) = \int N dy + h(x)$. Let $b = 1$ as before so the equation is exact:
+   \begin{align*}
+      \psi(x,y) &= \int N dy + h(x) \\
+               &= \int (xe^{2xy}) dy + h(x) \\
+                &= \frac{e^{2xy}}{2} + h(x)
+   \end{align*}
+   Now we take the partial derivative of $\psi$ with respect to $x$ instead of $y$, and remark that $\psi_x = M$:
+    \begin{align*}
+       M = ye^{2xy} + x = ye^{2xy} + h'(x) \\
+                   &\implies h'(x) = x \\
+                   &\implies h(x) = \frac{x^2}{2} + C
+   \end{align*}
+   Hence the implicit solution is (when $b = 1$):
+   \[ \psi(x,y) = \frac{e^{2xy}}{2} + \frac{x^2}{2} = C \]
+   which is exactly the same answer we found when letting $\psi(x,y) = \int M dx + h(y)$ and then taking the partial derivative with respect to $y$.
+\end{remark}
+
+\subsection{Integrating Factors to Make Exact Equations}
+
+Suppose that the we are dealing with an equation of the form $M(x,y) + N(x,y)\frac{dy}{dx} = 0$, but $M_y \neq N_x$. We can try to find an integrating factor $\mu(x,y)$ that makes the equation exact, that is:
+\[ \mu(x,y)M(x,y) + \mu(x,y)N(x,y)\frac{dy}{dx} = 0 \]
+By Definition 5.2.4, the above equation is exact if and only if $(\mu M)_y = (\mu N)_x$. By applying the product rule to both partial derivatives, we obtain that $\mu$ must satisfy the following differential equation:
+\[ M\mu_y - N\mu_x + (M_y - N_x)\mu = 0 \]
+Unfortunately, the above equation is almost always as hard to solve as the original differential equation. It is often much easier to solve simple integrating factors $\mu(x)$ or $\mu(y)$ that make the equation exact (in this class, we will only find integrating factors of one variable). 
+
+If we want to find an integrating factor $\mu(x)$, then the partial derivative $\mu_x$ reduces to $\frac{d\mu}{dx}$ and $\mu_y = 0$. If we make these substitutions into the equation above, we obtain:
+\begin{align}
+   \frac{d\mu}{dx} = \frac{M_y - N_x}{N}\mu 
+\end{align}
+If $(M_y - N_x)/N$ is a function of $x$ only, then we can integrate both sides of the equation to find the integrating factor $\mu(x)$.
+
+By simialr logic, the equation for finding $\mu(y)$ is:
+\begin{align}
+   \frac{d\mu}{dy} = \frac{N_x - M_y}{M}\mu
+\end{align}
+
+\begin{example}
+   Find the integrating factor that makes the differential equation $2xy + (2x^2 - 3y)\frac{dy}{dx} = 0$ exact. 
+\end{example}
+\begin{solution}
+   Let $M(x,y) = 2xy$ and $N(x,y) = 2x^2 - 3y$. We see that $M_y \neq N_x$, indeed $2x \neq 4x$. We will hence use an integrating factor to make the equation exact. First let us consider the integrating factor $\mu(x)$. Using Equation $(8)$ we obtain:
+   \begin{align*}
+      \frac{d\mu}{dx} &= \frac{M_y - N_x}{N}\mu \\ 
+                      &= \frac{2x - 4x}{2x^2 - 3y}\mu \\
+                      &=   \frac{-2x}{2x^2 - 3y}\mu
+   \end{align*}
+   This is bad, as the right side of the equation is in terms of both $x$ and $y$. Let us try $\mu(y)$ instead. Using Equation $(9)$ we obtain:
+   \begin{align*}
+      \frac{d\mu}{dy} &= \frac{N_x - M_y}{M}\mu \\
+                      &= \frac{4x - 2x}{2xy}\mu \\
+                      &= \frac{2x}{2xy}\mu \\
+                      &= \frac{\mu}{y}
+   \end{align*}
+   We can easily solve for $\mu(y)$ by separation of variables:
+   \begin{align*}
+      &\hspace{1cm} \frac{1}{\mu}d\mu = \frac{1}{y}dy \\
+      &\implies \ln|\mu| = \ln|y| + C \\
+      &\implies \mu(y) = Ay 
+   \end{align*}
+   where $A = e^C$. If we multiply the differential equation by our integrating factor, we obtain:
+   \[ 2xy^2 + (2x^2y -3y^2)\frac{dy}{dx} = 0\]
+   Let $M(x,y) = 2xy^2$ and $N(x,y) = 2x^2y - 3y^2$. We see that now, $M_y = 4xy = N_x$, hence the equation is now exact.  
+\end{solution}
+
+\subsection{Euler's Method}
+
+Suppose we want to approximate an ODE of the form $\frac{dy}{dx} = f(x,y)$ with the initial condition $y(x_0) = y_0$. First, recall the limit definition of the derivative:
+\[ \frac{dy}{dx} = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}\]
+With the limit definition of the derivative, we can approximate the derivative of any function with finite differences. So by this definition, 
+\[ \frac{dy}{dx}\bigg|_{x = 0} \approx \frac{f(h) - f(0)}{h} \approx \frac{y_1 - y_0}{h} \]
+
+However, remember that we defined $\frac{dy}{dx} = f(x,y)$. So we have that:
+\[ f(0, y_0) = f(0, y(0) = \frac{dy}{dx}\bigg|_{x = 0} \approx \frac{y_1 - y_0}{h} \]
+
+Let $0$ be $x_0$ so we obtain:
+\[ f(x_0, y_0) = \frac{y_1 - y_0}{h} \]
+Solving for $y_1$ we obtain:
+\[ y_1 = h \cdot f(x_0, y_0) + y_0 \]
+Observe that $(x_0, y_0)$ and $(x_1, y_1)$ are arbitrary points. This means that we can write the general case as:
+\[ y_{n+1} = h \cdot f(x_n, y_n) + y_n \]
+Why is this useful? It means that we can approximate the solutions of differential equations that cannot be solved exactly or explicitly by traditional methods like those that we have seen in class. 
+
+\begin{example}
+   Using Euler's method, approximate the solution to $\frac{dy}{dx} = e^{-x^2}$
+\end{example}
+
+\subsection{Second Order DEs, Homogenous Equations with Constant Coefficients}
+
+So far we have only looked at methods for solving first order differential equations, where the highest derivative was the first derivative. Now, we will begin to take a look at ODEs with second derivatives. The general form of a second order ODE is:
+\[ y'' = f(x,y,y') \] 
+In this class, we will only focus on linear second order ODEs, which are of the form:
+\[ y'' + p(x)y' + q(x)y = g(x) \]
+If $g(x) = 0$, we say that the equation is \textbf{homogenous} and if $g(x) \neq 0$ it is \textbf{nonhomogenous}. We will look more at second order DEs next lecture.
+

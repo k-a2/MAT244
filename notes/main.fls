@@ -583,6 +583,16 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/newtx/nxlmia.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/LibertineMathRM.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/txmiaSTbb.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm
+INPUT ./may27.tex
+INPUT ./may27.tex
+INPUT ./may27.tex
+INPUT ./may27.tex
+INPUT may27.tex
+INPUT ./may29.tex
+INPUT ./may29.tex
+INPUT ./may29.tex
+INPUT ./may29.tex
+INPUT may29.tex
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
