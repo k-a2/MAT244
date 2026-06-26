@@ -1,15 +1,63 @@
 \section{Linear Second Order Differential Equations}
 
-\subsection{Some Examples with Initial Values}
+\subsection{The Characteristic Equation}
 
 \begin{example}
-   Solve the following second order ODE with initial values:
-   \[ \begin{cases}
-         y'' - 4y = 0 \\
-         y(0) = 1 \\
-         y'(0) = 0
-   \end{cases} \]
+   Solve the following second order ODE: $ y'' - 4y = 0 $.
 \end{example}
 \begin{solution}
-   
+  We begin by observing that $y'' = 4y$. We can guess a function that we know has itself as a second derivative. For example, consider $y = y'' = e^x$. If we plug this into the second order DE we obtain:
+   \[e^x - 4e^x = -3e^x \neq 0\]
+   which is not a solution. Let us consider $y = e^{2x}$ instead. We have that $y'' = 4e^{2x}$. If we plug this in to the given second order DE we obtain:
+   \[4e^{2x} - 4e^{2x} = 0 \]
+   So $y = e^{2x}$ is a solution to the given second order DE.
+
+   But is it the only solution? It is not, as we can also clearly see that $y = e^{-2x}$ is a solution to the equation. 
+
+   Let $y_1 = e^{2x}$ and let $y_2 = e^{-2x}$. Notice that any linear combination of $y_1$ and $y_2$, $y = c_1y_1 + c_2y_2$, $c_1, c_2 \in \RR$, is a solution to this ODE. We call this equation the \textbf{general solution} to the equation as every solution to the ODE is contained in it. Hence, the solution to the ode $y'' - 4y = 0$. is $y = c_1e^{2x} + c_2e^{-2x}$.
 \end{solution}
+
+Let us look at the more general linear second order differential equation:
+\[ ay'' + by' + cy = 0 \]
+where $a, b, c \in \RR$ and $a \neq 0$. In the previous example, we solve a similar system by guessing the two solutions (which were exponential functions) and then writing a linear combination of them. However, there is a much more systematic method to finding the solutions to a second order DE.
+
+We begin by seeking exponential functions of the form $y = e^{rx}$ where $r \in \RR$. We have that $y' = re^{rx}$ and $y'' = r^2e^{rx}$. If we substitute these expressions into the general form of a second order DE, we obtain:
+\[ (ar^2 + br + c)e^{rx} = 0 \]
+Since $e^{rx} \neq 0$ for each $r$ and $x$, we have that:
+\[ ar^2 + br + c = 0 \]
+This equation is called the \textbf{characteristic equation} for a linear second order DE. If we have that $r$ is a root of the above polynomial equation, then $y = e^{rt}$ isa  solution to the differential equation. Since the equation is quadratic, we know that there will always be two roots, i.e. two solutions to any linear second order DE. Hence the solution to any second order DE will be of the form:
+\[ y = c_1e^{r_1t} + c_2e^{r_2t} \]
+where $c_1, c_2 \in \RR \setminus 0 $.
+
+\subsection{Second Order ODEs with Initial Values}
+
+\begin{example}
+   Solve the following system of equations:
+   \[ \begin{cases}
+      y'' + 4y' + 3y = 0 \\
+      y(0) = 2 \\
+      y'(0) = -1 
+      \end{cases} \]
+\end{example}
+\begin{solution}
+   We will begin by finding the solutions to the equation $y'' + 4y' + 3y = 0$. Let $a = 1$, $b = 4$, $c = 3$. The characteristic equaation to this ODE is:
+   \begin{align*}
+      &\hspace{1cm} r^2 + 4 + 3 = 0 \\
+      &\implies (r + 1)(r + 3) = 0 \\
+      &\implies r_1 = -1, r_2 = -3
+   \end{align*}
+   Hence the general solution to the equation is:
+   \[ y = c_1e^{-x} + c_2e^{-3x} \]
+   We will now use the initial conditions to find the values of $c_1$ and $c_2$. First, plugging $y(0) = 2$ into the general solution gives:
+    \[  2  = c_1 + c_2 \]
+     The derivative of the general solution is $y' = -c_1e^{-x} -3c_2e^{-3x}$. Plugging the initial condition $y'(0) = -1$ into the derivative yields:
+     \[ -1 = -c_1 - 3c_2 \]
+   We have a system of two equations:
+   \[ \begin{cases}
+      c_1 + c_2 = 2 \\
+      -c_1 - 3c_2 = -1
+   \end{cases} \]
+   Adding both equations together yields $-2c_2 = 1$, which implies that $c_2 = -0.5$. If we plug $c_2 = -0.5$ into the first equation, we obtain that $c_1 = 5/2$. Hence the particular solution to this system of equations is:
+   \[ y = \frac{5}{2}e^{-x} - \frac{1}{2}e^{-3x} \qedhere \]
+\end{solution}
+

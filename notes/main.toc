@@ -20,4 +20,5 @@
 \contentsline {subsection}{\numberline {6.3}Euler's Method}{24}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Second Order DEs, Homogenous Equations with Constant Coefficients}{24}{subsection.6.4}%
 \contentsline {section}{\numberline {7}Linear Second Order Differential Equations}{26}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Some Examples with Initial Values}{26}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.1}The Characteristic Equation}{26}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Second Order ODEs with Initial Values}{27}{subsection.7.2}%

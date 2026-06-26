@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.20)  15 JUN 2026 18:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.20)  17 JUN 2026 14:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -940,27 +940,27 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
 (Font)              scaled to size 8.8pt on input line 37.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
 (Font)              scaled to size 6.6pt on input line 37.
- [15] [16{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc}]) [17] (./may22.tex [18]) [19] [20] (./may27.tex [21] [22] [23]) [24] [25] (./may29.tex) [26] (./main.aux)
+ [15] [16{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc}]) [17] (./may22.tex [18]) [19] [20] (./may27.tex [21] [22] [23]) [24] [25] (./may29.tex [26]) [27] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C6097E979F84414676583F51FFD67374;5855.
+(rerunfilecheck)             Checksum: 5AD4EB95F26736488082F92F6CBCEA47;6077.
  ) 
 Here is how much of TeX's memory you used:
- 39818 strings out of 474116
- 889448 string characters out of 5743682
- 2013187 words of memory out of 5000000
- 61393 multiletter control sequences out of 15000+600000
+ 39822 strings out of 474116
+ 889498 string characters out of 5743682
+ 2014187 words of memory out of 5000000
+ 61394 multiletter control sequences out of 15000+600000
  631430 words of font info for 164 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  114i,18n,121p,1193b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/LibertineMathMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/LibertineMathMI7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinBiolinumTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTZ.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on main.pdf (27 pages, 519228 bytes).
+Output written on main.pdf (28 pages, 524398 bytes).
 PDF statistics:
- 410 PDF objects out of 1000 (max. 8388607)
- 334 compressed objects within 4 object streams
- 98 named destinations out of 1000 (max. 500000)
- 293 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 420 PDF objects out of 1000 (max. 8388607)
+ 343 compressed objects within 4 object streams
+ 101 named destinations out of 1000 (max. 500000)
+ 301 words of extra memory for PDF output out of 10000 (max. 10000000)
 
